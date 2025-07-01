@@ -1,0 +1,56 @@
+<!DOCTYPE>
+<html lang="fr">
+<head>
+    <title>Auto Green Test</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+        body {
+            font-family: Arial, Calibri, sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #080808;
+        }
+        p {
+            color: #080808;
+        }
+        a {
+            outline: none;
+            text-decoration: underline;
+        }
+        a:link {
+            color: #1693E5;
+        }
+        a:visited {
+            color: #0585d9;
+        }
+        .commentaire {
+            color: #717171;
+            font-style: italic;
+        }
+        .statut {
+            font-weight: bold;
+            color: %color%;
+        }
+        .important {
+            font-weight: bold;
+            color: #1693E5;
+        }
+        .textPlatform {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<h3>Rapport d'execution des tests <span class="textPlatform">Cucumber</span></h3>
+<div>
+    <p>
+        Numéro de build : <span class="important">$BUILD_NUMBER</span><br>
+        Date d'execution : <span class="important">%date%</span><br>
+        Statut : <span class="statut">%buildStatus%</span><br><br>
+
+        Lien du rapport d'execution : <a href='${BUILD_URL}%buildEndUrl%' target="_blank">lien jenkins</a><br>
+        <span class="commentaire">Pour retourner à la page de build jenkins, cliquez sur "Jenkins" (barre de menu du haut).</span>
+    </p>
+</div>
+</body>
+</html>
